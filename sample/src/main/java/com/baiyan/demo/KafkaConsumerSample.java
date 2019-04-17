@@ -36,7 +36,7 @@ public class KafkaConsumerSample {
             while (true) {
                 ConsumerRecords<String, String> records = consumer.poll(1000);
                 for (ConsumerRecord<String, String> record : records) {
-                    System.out.println(("topic=" + record.topic() + " ,partition=" + record.partition() + " ,offset=" + record.offset() + " ,customer=" + record.key() + " ,country=" + record.value() + "\n"));
+                    System.out.println(("\ntopic=" + record.topic() + " ,partition=" + record.partition() + " ,offset=" + record.offset() + " ,customer=" + record.key() + " ,country=" + record.value() + ""));
 //                    logger.info("topic=%s ,partition=%s ,offset= %d ,customer=%s ,country=%s\n", record.topic(),
 //                            record.partition(), record.offset(), record.key(), record.value());
                     int updatedCount = 1;
