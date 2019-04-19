@@ -34,7 +34,7 @@ public class KafkaConsumerSample {
         //轮询
         try {
             while (true) {
-                ConsumerRecords<String, String> records = consumer.poll(1000);
+                ConsumerRecords<String, String> records = consumer.poll(100);
                 for (ConsumerRecord<String, String> record : records) {
                     System.out.println(("\ntopic=" + record.topic() + " ,partition=" + record.partition() + " ,offset=" + record.offset() + " ,customer=" + record.key() + " ,country=" + record.value() + ""));
 //                    logger.info("topic=%s ,partition=%s ,offset= %d ,customer=%s ,country=%s\n", record.topic(),

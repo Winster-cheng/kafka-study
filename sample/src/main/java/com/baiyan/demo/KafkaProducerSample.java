@@ -28,11 +28,11 @@ public class KafkaProducerSample {
         ProducerRecord<String, String> record = new ProducerRecord<String, String>("CustomerCountry",
                 "Precision Products", "France");
         //简单发送
-//        producerWithSimple(producer, record);
+        producerWithSimple(producer, record);
         //同步
 //        producerWithSynchronization(producer,record);
         //异步
-        producerWithASynchronization(producer,record);
+//        producerWithASynchronization(producer,record);
     }
 
     //最简单的方式发送数据，注意要加上producer.flush();
