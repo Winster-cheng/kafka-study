@@ -26,7 +26,7 @@ public class KafkaProducerSample {
         producer = new KafkaProducer<String, String>(properties);
         //新建ProducerRecord对象
         ProducerRecord<String, String> record = new ProducerRecord<String, String>("CustomerCountry",
-                "Precision Products", "France");
+                "Precision Products", "Inspired by Hello Kitty and the latest seasonal shades, ColourPop x Hello Kitty is a full cosmetics collection of sweet colors for the eyes, lips and face. The assortment consists of singles, sets of four eye shadow shades, and a face kit that pairs three eye shadows, blush, highlighter and signature ColourPop ultra matte and ultra gloss lippies.");
         //简单发送
         producerWithSimple(producer, record);
         //同步
